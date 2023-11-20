@@ -1,8 +1,14 @@
+import { Blog, BlogHero } from "@/components";
 
 export default function blog() {
   return (
-    <div>
-      <h1>Blog Page</h1>
-    </div>
+    <main className="overflow-hidden">
+      <section>
+        <BlogHero />
+      </section>
+      <section>
+        <Blog />
+      </section>
+    </main>
   )
 }

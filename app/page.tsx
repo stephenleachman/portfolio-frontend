@@ -1,5 +1,5 @@
-import { About, Education, Hero, Work } from '@/components'
-import Image from 'next/image'
+import { About, Education, FeaturedPosts, FeaturedProjects, Hero, Work } from '@/components'
+
 
 export default function Home() {
   return (
@@ -15,6 +15,12 @@ export default function Home() {
       </section>
       <section>
         <Work />
+      </section>
+      <section>
+        <FeaturedProjects />
+      </section>
+      <section>
+        <FeaturedPosts />
       </section>
     </main>
   )
