@@ -3,8 +3,8 @@ import { About, Education, FeaturedPosts, FeaturedProjects, Hero, Work } from '@
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
-      <section>
+    <main className="overflow-hidden h-[20000px] bg-custom-gray-1 dark:bg-custom-dark-3">
+      <section >
         <Hero />
       </section>
       <section>

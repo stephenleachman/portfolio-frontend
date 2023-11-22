@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -18,10 +19,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeToggler />
-        <SideNav />
-        {children}
-        <Footer />
+        <div className="fixed">
+          <SideNav />
+        </div>
+          <div className="ml-[90px]">
+            <ThemeToggler />
+            {children}
+            <Footer />
+          </div>
+        
       </body>
     </html>
   )
