@@ -1,5 +1,4 @@
 'use client'
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaRegUser,FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa6";
@@ -7,12 +6,8 @@ import { IoIosImages } from "react-icons/io";
 import { BsBriefcase, BsGraphUpArrow } from "react-icons/bs";
 import { TiPen } from "react-icons/ti";
 import MenuImage from '@/public/images/mainMenuIcons/NavLogo.svg';
-// import { ScrollArea } from "@/components/ui/react-scroll-area"
-
-
+import { ScrollArea  } from '@radix-ui/themes';
 import { usePathname } from 'next/navigation';
-
-
 
 function SideNav() {
 
@@ -20,7 +15,10 @@ function SideNav() {
 
   return (
     <header>
-      <div className="flex flex-col justify-between h-screen bg-custom-gray dark:bg-custom-dark-3 sticky top-0 border-r-4 border-white dark:border-custom-dark-1">
+      <div className="h-screen bg-custom-gray dark:bg-custom-dark-2 sticky top-0" >
+      <div className="h-full w-[4px] absolute bg-white dark:bg-custom-dark-1 right-0"></div>
+       <ScrollArea  scrollbars="vertical">
+      <div className="flex flex-col justify-between h-screen relative pr-[4px]">
         <div>
           <div className="mb-10">
             <Link href='/'>
@@ -43,7 +41,7 @@ function SideNav() {
                 <div className="py-4 grid justify-items-center	">
                   <FaRegUser className="text-2xl mb-2"/> Home
                 </div>
-                <div className={`${pathname === '/' ? 'h-full w-[4px] bg-gradient-to-b from-custom-blue to-custom-green absolute right-0 mr-[-4px]' : ''}`}></div>
+                <div className={`${pathname === '/' ? 'h-full w-[4px] bg-gradient-to-b from-custom-blue to-custom-green  absolute right-0 mr-[-4px]' : ''}`}></div>
                 <div className={`${pathname === '/' ? 'h-full w-full bg-gradient-to-b from-custom-blue to-custom-green absolute opacity-20' : ''}`}></div>
               </div>
             </Link>
@@ -119,7 +117,10 @@ function SideNav() {
             </div>
           </Link>
         </div>
+        </div>
+        </ScrollArea>
       </div>
+    
     </header>
   )
 }

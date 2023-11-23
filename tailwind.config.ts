@@ -24,6 +24,9 @@ const config: Config = {
         'custom-dark-2': '#374151',
         'custom-dark-3': '#1F2A37',
         'custom-dark-text': '#8899A8',
+
+        'custom-Opacity-blue': '#EBF6FB',
+        'custom-Opacity-green': '#ECF7F3',
       },
     },
   },

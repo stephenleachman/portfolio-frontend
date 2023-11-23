@@ -2,7 +2,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Footer, SideNav, ThemeToggler } from '@/components'
+import { Footer, SideNav } from '@/components'
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,15 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Theme>
         <div className="fixed">
           <SideNav />
         </div>
           <div className="ml-[90px]">
-            <ThemeToggler />
+           
             {children}
             <Footer />
           </div>
-        
+        </Theme>
       </body>
     </html>
   )

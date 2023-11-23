@@ -8,7 +8,6 @@ import FeaturedProjects from './home_page_sections/FeaturedProjects';
 import FeaturedPosts from './home_page_sections/FeaturedPosts';
 import ProjectsHero from './projects_page_sections/Hero';
 import Projects from './projects_page_sections/projects';
-import ThemeToggler from './ThemeToggler';
 import BlogHero from './blog_page_sections/BlogHero';
 import Blog from './blog_page_sections/Blog';
 
@@ -23,7 +22,7 @@ export {
     FeaturedPosts,
     ProjectsHero,
     Projects,
-    ThemeToggler,
+
     BlogHero,
     Blog,
 }
