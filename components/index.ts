@@ -10,6 +10,7 @@ import ProjectsHero from './projects_page_sections/Hero';
 import Projects from './projects_page_sections/projects';
 import BlogHero from './blog_page_sections/BlogHero';
 import Blog from './blog_page_sections/Blog';
+import ThemeToggler from './ThemeToggler';
 
 export {
     Hero,
@@ -22,7 +23,7 @@ export {
     FeaturedPosts,
     ProjectsHero,
     Projects,
-
+    ThemeToggler,
     BlogHero,
     Blog,
 }
