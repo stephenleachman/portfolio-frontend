@@ -5,13 +5,16 @@ import Link from 'next/link';
 import { homePageSectionLinks } from '@/Constants';
 import { usePathname } from 'next/navigation';
 import { TypeAnimation } from 'react-type-animation';
+import HeroImage from '@/public/images/mainMenuIcons/heroImage33.png';
+import LinkButton from '@/components/ui/LinkButton';
+
 
 function Hero() {
 
   const pathname = usePathname();
 
   return (
-    <div className="flex justify-center h-screen ">
+    <div className="flex justify-center ">
       <div className="bg-gradient-to-r from-custom-Opacity-blue to-custom-Opacity-green absolute h-full w-full z-0 dark:hidden"></div>
       <div className="container z-10 relative">
         <div className="w-full flex justify-between absolute">
@@ -20,7 +23,7 @@ function Hero() {
               <Link 
                 key={item.title}
                 href={item.url}
-                className={`text-custom-dark-text mr-8 hover:text-sky-500 hover:dark:text-sky-500 font-medium	relative ${pathname === `${item.url}` ? ' dark:text-custom-blue text-sky-500 border-b-2	border-custom-blue' : ''}`}
+                className={`text-custom-dark-1 dark:text-custom-dark-text mr-8 hover:text-sky-500 hover:dark:text-sky-500 font-medium	relative ${pathname === `${item.url}` ? ' dark:text-sky-500 text-sky-500 border-b-2	border-custom-blue' : ''}`}
               >
                 {item.title}
               </Link>
@@ -29,8 +32,8 @@ function Hero() {
           <ThemeToggler />
         </div>
         
-        <div className="h-screen grid grid-cols-2 gap-1 content-center">
-          <div>
+        <div className="tall:h-screen grid grid-cols-2 gap-1 content-center">
+          <div className="grid place-content-center">
             <div className="flex items-center">
               <h2 className="text-custom-dark-2 dark:text-gray-50 text-4xl mb-10 tracking-wide">Hey, I’m</h2>
               <div className="w-12 h-1 bg-gradient-to-r from-custom-blue to-custom-green rounded ml-5 self-center mb-10"></div>
@@ -59,14 +62,24 @@ function Hero() {
             <p className="text-custom-dark-1 dark:text-custom-dark-text leading-relaxed text-lg">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet proin ut vitae, felis. Mauris aliquet faucibus iaculis dui vitae ullamcorper ac enim mi pharetra amet.
             </p>
+            <div>
+            <LinkButton
+              path="/projects"
+              title="My Services"
+              containerStyle="mt-10"
+            />
+            </div>
           </div>
-          <div>
-            {/* <Image
+          <div className="justify-self-end ">
+            <Image
               src={HeroImage}
+              alt="hero image of Stephen Leachman"
+              height={800}
+              width={800}
+              priority
+              className="object-cover h-[800px] w-full mb-[100px]"
             >
-
-            </Image> */}
-           
+            </Image>
           </div>
         </div>
       </div>

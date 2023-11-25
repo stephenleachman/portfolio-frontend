@@ -29,6 +29,10 @@ const config: Config = {
         'custom-Opacity-blue': '#EBF6FB',
         'custom-Opacity-green': '#ECF7F3',
       },
+      screens: {
+        'tall': { 
+          'raw': '(min-height: 700px)' },
+      },
     },
   },
   plugins: [],

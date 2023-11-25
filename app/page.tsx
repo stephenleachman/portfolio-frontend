@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <ThemeProvider enableColorScheme={true} attribute="class">
       <main className="overflow-hidden">
-        <section id="#" className="min-h-screen grid content-center px-10 dark:bg-custom-dark-3 relative border-b-4 dark:border-custom-dark-1">
+        <section id="#" className="tall:h-screen grid content-center px-10  dark:bg-custom-dark-3 relative border-b-4 border-white dark:border-custom-dark-1">
           <Hero />
         </section>
         <section id="about" className="h-[1500px]">

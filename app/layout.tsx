@@ -5,6 +5,7 @@ import './globals.css'
 import { Footer, SideNav } from '@/components'
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
+import '@radix-ui/themes/styles.css';
 
 
 const inter = Inter({ subsets: ['latin'] })
