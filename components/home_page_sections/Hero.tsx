@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 import { ThemeToggler } from '@/components'
 import { FaChevronCircleDown  } from "react-icons/fa";
@@ -7,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { TypeAnimation } from 'react-type-animation';
 import HeroImage from '@/public/images/mainMenuIcons/heroImage33.png';
 import LinkButton from '@/components/ui/LinkButton';
-
+import { motion } from "framer-motion"
 
 function Hero() {
 
@@ -32,13 +33,19 @@ function Hero() {
           <ThemeToggler />
         </div>
         
-        <div className="tall:h-screen grid grid-cols-2 gap-1 content-center">
+        <motion.div className="tall:h-screen grid grid-cols-2 gap-1 content-center"
+          transition={{
+            ease: "linear",
+            duration: 2,
+            x: { duration: 1 }
+          }}
+        >
           <div className="grid place-content-center">
             <div className="flex items-center">
               <h2 className="text-custom-dark-2 dark:text-gray-50 text-4xl mb-10 tracking-wide">Hey, I’m</h2>
               <div className="w-12 h-1 bg-gradient-to-r from-custom-blue to-custom-green rounded ml-5 self-center mb-10"></div>
             </div>
-            <h1 className="text-custom-dark-2 dark:text-gray-50 text-7xl	tracking-wide">Stephen Leachman</h1>
+            <h1 className="text-custom-dark-2 dark:text-gray-50 text-7xl tracking-wide">Stephen Leachman</h1>
             <h2 className="text-custom-dark-2 dark:text-gray-50 text-4xl	my-10 font-semibold tracking-wider"> A <span className="bg-gradient-to-r from-custom-blue to-custom-green bg-clip-text text-transparent">
               <TypeAnimation
                 sequence={[
@@ -81,7 +88,7 @@ function Hero() {
             >
             </Image>
           </div>
-        </div>
+        </motion.div>
       </div>
       <Link href="#about" >
         <FaChevronCircleDown className="text-custom-gray-link dark:text-custom-dark-text text-4xl absolute bottom-10 left-[48.7%] right-[50%] z-10"/>
